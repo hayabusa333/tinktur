@@ -6,3 +6,8 @@ build: $(PROGRAM)
 
 $(PROGRAM): $(GO_FILES)
 	go build -o $(PROGRAM)
+
+.PHONY: fmt
+fmt:
+	go fmt ./...
+	go vet ./...
